@@ -23,8 +23,8 @@ import testdata.LocatorsFactory;
 public class pharmacy_testcase extends AppTestBase {
 	Map<String, String> configData;
 	Map<String, String> loginCredentials;
-	String expectedDataFilePath = testDataFilePath + "expected_data.json";
-	String loginFilePath = loginDataFilePath + "Login.json";
+	String expectedDataFilePath = testDataFilePath + "expected_data.xlsx";
+	String loginFilePath = loginDataFilePath + "Login.xlsx";
 	StartupPage startupPage;
 	String randomInvoiceNumber;
 	pharmacy_Pages pharmacy_pl1_pageInstance;
