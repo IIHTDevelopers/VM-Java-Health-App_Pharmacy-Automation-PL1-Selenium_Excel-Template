@@ -1,0 +1,580 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/15</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 28 15:22:26 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>56 seconds (56327 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.pharmacy_testcase.initBrowser()'><b>initBrowser</b><br>Test class: testcases.pharmacy_testcase<br>Parameters: chrome, dev</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1262588450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1262588450'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.tearDown()'><b>tearDown</b><br>Test class: testcases.pharmacy_testcase</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at coreUtilities.testbase.TestBase.browserTearDown(TestBase.java:111)
+	at testcases.pharmacy_testcase.tearDown(pharmacy_testcase.java:326)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1538979394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1538979394'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at coreUtilities.testbase.TestBase.browserTearDown(TestBase.java:111)
+	at testcases.pharmacy_testcase.tearDown(pharmacy_testcase.java:326)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyTitleOfTheHomePage()'><b>verifyTitleOfTheHomePage</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Verify the title and url of  the current page.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace704483100", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704483100'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyToolTipText()'><b>verifyToolTipText</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section. 
+1. Hover the mouse over the star/favourite icon. 
+2. Verify that a tooltip with the text "Remember this date" appears when hovering over the star.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace369977033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace369977033'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyAddedGoodReceipt()'><b>verifyAddedGoodReceipt</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Verify that the user can view the added receipt.
+If the receipt is added, 
+then click on the "View" button.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1092928833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1092928833'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.performScrollOperation()'><b>performScrollOperation</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section. 
+1. Enter the keyword "100" in the price field. 
+2. Verify that the records matching the entered keyword are displayed.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1061858575", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1061858575'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifySearchResultDisplayedInTable()'><b>verifySearchResultDisplayedInTable</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section. 
+1. Enter the invoice number in Search field. 
+2. Click on the 'Show Details' button for a matching record. 
+3. Verify that the records matching the entered keyword are displayed in the table. 
+4. Click on the 'View' button for the invoice. 
+5. Verify the invoice number is present in the printed details. 
+6. Close the 'Add Good Receipt' modal.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2088218481", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2088218481'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyErrorMessageOnPrintingGoodReceiptWithoutDetails()'><b>verifyErrorMessageOnPrintingGoodReceiptWithoutDetails</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Verify that the user is logged in and is on the Pharmacy section.
+If the user is on the Pharmacy section, 
+then click on the "New Good Receipt" button and 
+scroll to the bottom of the screen and 
+click on the "Print Receipt" button.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1990010805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1990010805'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyDataIsAsPerAppliedDateFilter()'><b>verifyDataIsAsPerAppliedDateFilter</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Pre condition: User should be logged in and it is on Pharmacy section
+1. Click on the "From" date
+2. Select the "From" date
+3. Click on the "To" date
+4. Select "To" date
+5. Click on "OK" button</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace659934077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace659934077'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyUpdateOfExistingGoodReceipt()'><b>verifyUpdateOfExistingGoodReceipt</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section. 
+1. Click on the "View" button. 
+2. Click on the "Edit GR" button. 
+3. Click on the "Edit" pencil icon. 
+4. Make changes to the Good Receipt. 
+5. Click on the "Update" button.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace235814595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace235814595'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyNavigationToAnotherSubModuleAfterOpeningTheOrderSection()'><b>verifyNavigationToAnotherSubModuleAfterOpeningTheOrderSection</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section
+1. Click on the Order
+2. Click on the Supplier</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace879656479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace879656479'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyPharmacySubModules()'><b>verifyPharmacySubModules</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section
+1. Click on the Pharmacy Module drop-down arrow
+2. Click on Order</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace168568920", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace168568920'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.addNewGoodReceipt()'><b>addNewGoodReceipt</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section
+1. Click on the new Good Receipt button
+User should be able to click on the new Good Receipt button
+User should be able to add a new receipt after filling all mandatory fields</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1321318998", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1321318998'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyGoodReceiptRadioButtonsAreSelectable()'><b>verifyGoodReceiptRadioButtonsAreSelectable</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Verify that the radio buttons in the Pharmacy section can be selected:
+1. Click on the 'Complete' radio button and verify it is selectable.
+2. Click on the 'Cancelled' radio button and verify it is selectable.
+3. Click on the 'All' radio button and verify it is selectable.</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace597230915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace597230915'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyPharmacyModule()'><b>verifyPharmacyModule</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section
+1. Login in the healthapp application
+2. Scroll down menu till pharmacy
+3. Click on the pharmacy</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace302956115", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace302956115'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyElementsUnderOrderTab()'><b>verifyElementsUnderOrderTab</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section
+1. Click on the Pharmacy Module drop-down arrow
+2. Click on order
+Verify the presence of the order section with all fields</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace74615279", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace74615279'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+<tr>
+<td title='testcases.pharmacy_testcase.verifyRecordsAccordingToSelectedSupplier()'><b>verifyRecordsAccordingToSelectedSupplier</b><br>Test class: testcases.pharmacy_testcase<br>Test method: Precondition: User should be logged in and on the Pharmacy section. 
+1. Click on the "Select Supplier" dropdown. 
+2. Choose the supplier name from the dropdown. 
+3. Click on the "Show Details" button. 
+4. The records should be present as per select supplier</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652616985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace652616985'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Map.get(Object)&quot; because &quot;this.configData&quot; is null
+	at testcases.pharmacy_testcase.initBrowser(pharmacy_testcase.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>testcases.pharmacy_testcase@78d50a3c</td></tr>
+</table><p>
+</body>
+</html>
