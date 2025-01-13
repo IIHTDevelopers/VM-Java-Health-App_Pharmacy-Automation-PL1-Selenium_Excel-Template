@@ -188,7 +188,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 @Test15.1 @Test15.2 about
+	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 about
 	 * this method visitOrderTabUnderPharmacy()
 	 * 
 	 * @param : null
@@ -385,7 +385,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.4, @Test7.6 @Test14.6 about this method
+	 * @Test6.4, @Test7.6 about this method
 	 * verifyMessageByText()
 	 * 
 	 * @param messageText - the text to match within the message element
@@ -426,7 +426,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test7.4 and @Test14.5 about this method addGriItemWithMandatoryFieldsOnly()
+	 * @Test7.4 about this method addGriItemWithMandatoryFieldsOnly()
 	 * 
 	 * @param itemName    - the name of the item to be added
 	 * @param batchNumber - the batch number of the item
@@ -482,7 +482,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.4 @Test10.3 @Test14.3 about this method
+	 * @Test8.4 @Test10.3 about this method
 	 * clickViewButtonWithInvoice()
 	 * 
 	 * @param : String
@@ -513,7 +513,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.2 @Test10.1 @Test14.1 about this method
+	 * @Test8.2 @Test10.1 about this method
 	 * clickAndEnterValueInSearchField()
 	 * 
 	 * @param : String
@@ -539,36 +539,10 @@ public class pharmacy_Pages extends StartupPage {
 		return null;
 	}
 
-	/**
-	 * @Test13 about this method
-	 *         verifyGoodsReceiptTableDataIsPresentAfterEnteringSupplierName()
-	 * 
-	 * @param : null
-	 * @description : Verify result appears after searching with supplier name
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the result
-	 * @author : YAKSHA
-	 */
-	public boolean verifyGoodsReceiptTableDataIsPresentAfterEnteringSupplierName(
-			Map<String, String> pharmacyExpectedData) {
-		return false;
-	}
+	
 
 	/**
-	 * @Test14.4 about this method clickOnEditGRButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks on the edit GR button
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue clicking the edit GR button
-	 * @author : YAKSHA
-	 */
-	public boolean clickOnEditGRButton() {
-		return false;
-	}
-
-	/**
-	 * @Test8.3 @Test9.2 @Test10.2 @Test14.2
+	 * @Test8.3 @Test9.2 @Test10.2 
 	 * about this method highlightAndClickOnButton()
 	 * 
 	 * @param : By, String
@@ -622,83 +596,5 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	
-
-	/**
-	 * @Test15.3 about this method clickCompleteRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks on the "Complete" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickCompleteRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test15.4 about this method isCompleteRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "Complete" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isCompleteRadioButtonSelectable() throws Exception {
-		return false;	
-	}
-
-	/**
-	 * @Test15.5 about this method clickCancelledRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks the "Cancelled" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickCancelledRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test15.6 about this method isCancelledRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "Cancelled" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isCancelledRadioButtonSelectable() throws Exception {
-		return false;
-		}
-
-	/**
-	 * @Test15.7 about this method clickAllRadioButton()
-	 * 
-	 * @param : null
-	 * @description : Clicks the "All" radio button
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public void clickAllRadioButton() throws Exception {
-		
-	}
-
-	/**
-	 * @Test15.8 about this method isAllRadioButtonSelectable()
-	 * 
-	 * @param : null
-	 * @description : Verify whether the "All" radio button is selectable
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the radio button
-	 * @author : YAKSHA
-	 */
-	public boolean isAllRadioButtonSelectable() throws Exception {
-		return false;
-	}
 
 }
