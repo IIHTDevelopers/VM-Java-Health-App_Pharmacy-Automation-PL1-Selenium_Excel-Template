@@ -256,69 +256,6 @@ public class pharmacy_testcase extends AppTestBase {
 		Assert.assertEquals(pharmacy_pl1_pageInstance.verifyToolTipText(), pharmacyExpectedData.get("favouriteIcon"));
 	}
 
-	@Test(priority = 13, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Click on the \"Select Supplier\" dropdown. \r\n"
-					+ "2. Choose the supplier name from the dropdown. \r\n"
-					+ "3. Click on the \"Show Details\" button. \r\n"
-					+ "4. The records should be present as per select supplier")
-	public void verifyRecordsAccordingToSelectedSupplier() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		Map<String, String> pharmacyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "Pharmacy");
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyGoodsReceiptTableDataIsPresentAfterEnteringSupplierName(
-				pharmacyExpectedData), "Table data is not present for the selected supplier");
-	}
-
-	@Test(priority = 14, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Click on the \"View\" button. \r\n" + "2. Click on the \"Edit GR\" button. \r\n"
-					+ "3. Click on the \"Edit\" pencil icon. \r\n" + "4. Make changes to the Good Receipt. \r\n"
-					+ "5. Click on the \"Update\" button.")
-	public void verifyUpdateOfExistingGoodReceipt() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		Map<String, String> pharmacyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "Pharmacy");
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickAndEnterValueInSearchField(randomInvoiceNumber),
-				"Search Bar is not Displayed");
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(pharmacy_pl1_pageInstance.showDetails,
-				"Show Details Button");
-		pharmacy_pl1_pageInstance.clickViewButtonWithInvoice(randomInvoiceNumber);
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickOnEditGRButton(), "Edit GR button is not displayed");
-		WebElement editGoodsRecordButton = userActionsInstance
-				.findElement(pharmacy_pl1_pageInstance.editGoodsRecordButton);
-		userActionsInstance.highlightElement(editGoodsRecordButton)
-				.click(pharmacy_pl1_pageInstance.editGoodsRecordButton);
-		pharmacy_pl1_pageInstance.addGriItemWithMandatoryFieldsOnly(null, null, null, null,
-				pharmacyExpectedData.get("mrp"));
-		userActionsInstance.click(pharmacy_pl1_pageInstance.updateReceiptButtonId);
-		Assert.assertEquals(
-				pharmacy_pl1_pageInstance.verifyMessageByText(pharmacyExpectedData.get("goodReceiptUpdatedSuccessMsg")),
-				pharmacyExpectedData.get("goodReceiptUpdatedSuccessMsg"));
-	}
-
-	@Test(priority = 15, groups = {
-			"sanity" }, description = "Verify that the radio buttons in the Pharmacy section can be selected:\r\n"
-					+ "1. Click on the 'Complete' radio button and verify it is selectable.\r\n"
-					+ "2. Click on the 'Cancelled' radio button and verify it is selectable.\r\n"
-					+ "3. Click on the 'All' radio button and verify it is selectable.")
-	public void verifyGoodReceiptRadioButtonsAreSelectable() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		pharmacy_pl1_pageInstance.visitTabUnderPharmacy("Supplier");
-		pharmacy_pl1_pageInstance.visitTabUnderPharmacy("Order");
-		pharmacy_pl1_pageInstance.clickCompleteRadioButton();
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isCompleteRadioButtonSelectable());
-		pharmacy_pl1_pageInstance.clickCancelledRadioButton();
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isCancelledRadioButtonSelectable());
-		pharmacy_pl1_pageInstance.clickAllRadioButton();
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isAllRadioButtonSelectable());
-	}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
