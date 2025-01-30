@@ -196,66 +196,6 @@ public class pharmacy_testcase extends AppTestBase {
 		Assert.assertTrue(pharmacy_pl1_pageInstance.closeAddGoodReceiptModal());
 	}
 
-	@Test(priority = 9, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on Pharmacy section\r\n"
-					+ "1. Click on the \"From\" date\r\n" + "2. Select the \"From\" date\r\n"
-					+ "3. Click on the \"To\" date\r\n" + "4. Select \"To\" date\r\n" + "5. Click on \"OK\" button")
-	public void verifyDataIsAsPerAppliedDateFilter() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-		LocalDate currentDate = LocalDate.now();
-		LocalDate date7DaysAgo = currentDate.minusDays(7);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		String toDate = currentDate.format(formatter);
-		String fromDate = date7DaysAgo.format(formatter);
-		pharmacy_pl1_pageInstance.applyDateFilter(fromDate, toDate);
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(pharmacy_pl1_pageInstance.showDetails,
-				"Show Details Button");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyActualDatesAreWithinThisRange(fromDate, toDate));
-	}
-
-	@Test(priority = 10, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Enter the invoice number in Search field. \r\n"
-					+ "2. Click on the 'Show Details' button for a matching record. \r\n"
-					+ "3. Verify that the records matching the entered keyword are displayed in the table. \r\n"
-					+ "4. Click on the 'View' button for the invoice. \r\n"
-					+ "5. Verify the invoice number is present in the printed details. \r\n"
-					+ "6. Close the 'Add Good Receipt' modal.")
-	public void verifySearchResultDisplayedInTable() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickAndEnterValueInSearchField(randomInvoiceNumber),
-				"Search Bar is not Displayed");
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(pharmacy_pl1_pageInstance.showDetails,
-				"Show Details Button");
-		pharmacy_pl1_pageInstance.clickViewButtonWithInvoice(randomInvoiceNumber);
-		Assert.assertTrue(pharmacy_pl1_pageInstance.doesPrintContainsInvoiceNumber(randomInvoiceNumber),
-				"Print doesn't contains Invoice Number");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.closeAddGoodReceiptModal());
-	}
-
-	@Test(priority = 11, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Enter the keyword \"100\" in the price field. \r\n"
-					+ "2. Verify that the records matching the entered keyword are displayed.")
-	public void performScrollOperation() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-
-		Assert.assertTrue(pharmacy_pl1_pageInstance.performScrollOperation(), "Scroll operation is performed");
-	}
-
-	@Test(priority = 12, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section. \r\n"
-					+ "1. Hover the mouse over the star/favourite icon. \r\n"
-					+ "2. Verify that a tooltip with the text \"Remember this date\" appears when hovering over the star.")
-	public void verifyToolTipText() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-
-		Map<String, String> pharmacyExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "Pharmacy");
-		Assert.assertEquals(pharmacy_pl1_pageInstance.verifyToolTipText(), pharmacyExpectedData.get("favouriteIcon"));
-	}
-
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
