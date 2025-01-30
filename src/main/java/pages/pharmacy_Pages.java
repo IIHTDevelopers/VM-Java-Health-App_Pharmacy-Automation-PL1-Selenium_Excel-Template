@@ -407,7 +407,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.5, @Test8.5 and @Test10.5 about this method closeAddGoodReceiptModal()
+	 * @Test6.5, @Test8.5 and about this method closeAddGoodReceiptModal()
 	 * 
 	 * @param : null
 	 * @description : This method locates the "Close" button of the "Add Good
@@ -482,7 +482,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.4 @Test10.3 about this method
+	 * @Test8.4 about this method
 	 * clickViewButtonWithInvoice()
 	 * 
 	 * @param : String
@@ -498,7 +498,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.6 @Test10.4 about this method doesPrintContainsInvoiceNumber()
+	 * @Test8.6 about this method doesPrintContainsInvoiceNumber()
 	 * 
 	 * @param : String
 	 * @description : Verify whether the printed report contains expected invoice
@@ -513,7 +513,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test8.2 @Test10.1 about this method
+	 * @Test8.2 about this method
 	 * clickAndEnterValueInSearchField()
 	 * 
 	 * @param : String
@@ -528,21 +528,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test12 about this method verifyToolTipText()
-	 * @param : null
-	 * @description : Verify the text of the tooltip
-	 * @return : String
-	 * @throws : Exception - if there is an issue finding the text
-	 * @author : YAKSHA
-	 */
-	public String verifyToolTipText() {
-		return null;
-	}
-
-	
-
-	/**
-	 * @Test8.3 @Test9.2 @Test10.2 
+	 * @Test8.3 
 	 * about this method highlightAndClickOnButton()
 	 * 
 	 * @param : By, String
@@ -553,48 +539,6 @@ public class pharmacy_Pages extends StartupPage {
 	 */
 	public boolean highlightAndClickOnButton(By element, String buttonName) {
 		return false;
-	}
-
-	/**
-	 * @Test11 about this method performScrollOperation()
-	 * @param : null
-	 * @description : Scrolls till Pharmacy tab, selects it, and clicks "Order" sub
-	 *              tab
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the tab
-	 * @author : YAKSHA
-	 */
-	public boolean performScrollOperation() {
-		return false;
-	}
-
-	/**
-	 * @Test9.1 about this method applyDateFilter()
-	 * 
-	 * @param : String, String
-	 * @description : Applies the date filter with date range
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding or filling the date fields
-	 * @author : YAKSHA
-	 */
-	public boolean applyDateFilter(String fromDate, String toDate) throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test9.3 about this method verifyActualDatesAreWithinThisRange()
-	 * 
-	 * @param : String, String
-	 * @description : Verify whether results are within the applied date range
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the actual dates within
-	 *           the results
-	 * @author : YAKSHA
-	 */
-	public boolean verifyActualDatesAreWithinThisRange(String fromDate, String toDate) {
-		return false;
-	}
-
-	
+	}	
 
 }
