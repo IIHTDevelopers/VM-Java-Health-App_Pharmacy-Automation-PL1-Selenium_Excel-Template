@@ -12,6 +12,11 @@ import testBase.UserActions;
 public class LocatorsFactory extends UserActions {
 
 	UserActions userActions = new UserActions(driver);
+	
+	//Locators for pharmacy
+	
+		public By showDetails = By.xpath("//button[contains(text(),'Show Details')]");
+		public By closeModalButtonXpath2 = By.xpath("//a[contains(@class,'history-del-btn')]");
 
 	// element of health application
 
