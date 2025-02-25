@@ -185,11 +185,11 @@ public class pharmacy_testcase extends AppTestBase {
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 		userActionsInstance = new UserActions(driver);
 
-		userActionsInstance.click(pharmacy_pl1_pageInstance.closeModalButtonXpath2);
+		userActionsInstance.click(locatorsFactoryInstance.closeModalButtonXpath2);
 		pharmacy_pl1_pageInstance.closeModalBySubjectName("Add Good Receipt");
 		Assert.assertTrue(pharmacy_pl1_pageInstance.clickAndEnterValueInSearchField(randomInvoiceNumber),
 				"Search Bar is not Displayed");
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(pharmacy_pl1_pageInstance.showDetails,
+		pharmacy_pl1_pageInstance.highlightAndClickOnButton(locatorsFactoryInstance.showDetails,
 				"Show Details Button");
 		pharmacy_pl1_pageInstance.clickViewButtonWithInvoice(randomInvoiceNumber);
 		Assert.assertTrue(pharmacy_pl1_pageInstance.doesPrintContainsInvoiceNumber(randomInvoiceNumber));
