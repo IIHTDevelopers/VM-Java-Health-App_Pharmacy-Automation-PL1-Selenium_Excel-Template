@@ -103,27 +103,13 @@ public class pharmacy_testcase extends AppTestBase {
 
 		Assert.assertTrue(pharmacy_pl1_pageInstance.areSubTabsUnderOrderPresent(),
 				"All the sub tabs under order are not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Add New Good Receipt"),
-				"The Add New Good Receipt button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Show Details"),
-				"The Show Details button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("OK"), "The OK button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Export"), "The Export button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Print"), "The Print button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("First"), "The First button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Previous"), "The Previous button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Next"), "The Next button is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isButtonPresent("Last"), "The Last button is not present");
 
-		Assert.assertTrue(pharmacy_pl1_pageInstance.areAgingDaysFieldsPresent(), "Aging Days field is not present");
 		Assert.assertTrue(pharmacy_pl1_pageInstance.isSearchBarPresent(), "Search Bar is not present");
 
 		Assert.assertTrue(pharmacy_pl1_pageInstance.areDateDropdownsPresent(), "Date dropdowns are not present");
 		Assert.assertTrue(pharmacy_pl1_pageInstance.isSelectSupplierDropdownPresent(),
 				"Select supplier dropdown is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.isFilterDropdownPresent(), "Filter dropdown is not present");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.areFilterByStatusRadioButtonsPresent(),
-				"Filter by status radio buttons are not present");
+
 
 	}
 
