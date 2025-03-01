@@ -26,16 +26,10 @@ public class pharmacy_Pages extends StartupPage {
 	By orderTabXpath = null;
 	By purchaseOrderSubTabXpath = null;
 	By goodsReceiptSubTabXpath = null;
-	By agingDaysFromXpath = null;
-	By agingDaysToXpath = null;
 	public By searchBarId = null;
 	By calendarFromDropdown = null;
 	By calendarToDropdown = null;
 	public By supplierNameDropdownXpath = null;
-	By filterDropdownXpath = null;
-	By radioButtonCompleteXpath = null;
-	public By radioButtonCancelledXpath = null;
-	By radioButtonAllXpath = null;
 //	TC5-Locators
 	By supplierTabXpath = null;
 //	TC6-Locators
@@ -198,34 +192,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test4.4 about this method isButtonPresent()
-	 * 
-	 * @param : String
-	 * @description : verify button presence through text
-	 * @return : boolean
-	 * @author : YAKSHA
-	 */
-	public boolean isButtonPresent(String buttonText) throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test4.5 about this method areAgingDaysFieldsPresent()
-	 * 
-	 * @param : null
-	 * @description : This method verifies if the 'Aging Days From' and 'Aging Days
-	 *              To' fields are present and highlighted.
-	 * @return : boolean - true if both fields are displayed, false otherwise
-	 * @throws : Exception - if there is an issue locating or highlighting the
-	 *           fields
-	 * @author : YAKSHA
-	 */
-	public boolean areAgingDaysFieldsPresent() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test4.6 about this method isSearchBarPresent()
+	 * @Test4.4 about this method isSearchBarPresent()
 	 * 
 	 * @param : null
 	 * @description : This method verifies if the search bar is present and
@@ -240,7 +207,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test4.7 about this method areDateDropdownsPresent()
+	 * @Test4.5 about this method areDateDropdownsPresent()
 	 * 
 	 * @param : null
 	 * @description : This method verifies if the 'From' and 'To' date dropdowns are
@@ -256,7 +223,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test4.8 about this method isSelectSupplierDropdownPresent()
+	 * @Test4.6 about this method isSelectSupplierDropdownPresent()
 	 * 
 	 * @param : null
 	 * @description : This method verifies if the 'Select Supplier' dropdown is
@@ -268,37 +235,6 @@ public class pharmacy_Pages extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public boolean isSelectSupplierDropdownPresent() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test4.9 about this method isFilterDropdownPresent()
-	 * 
-	 * @param : null
-	 * @description : This method verifies if the filter dropdown is present and
-	 *              highlighted on the page.
-	 * @return : boolean - true if the filter dropdown is displayed, false otherwise
-	 * @throws : Exception - if there is an issue locating or highlighting the
-	 *           dropdown
-	 * @author : YAKSHA
-	 */
-	public boolean isFilterDropdownPresent() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test4.10 about this method areFilterByStatusRadioButtonsPresent()
-	 * 
-	 * @param : null
-	 * @description : This method verifies if the 'Completed', 'Cancelled', and
-	 *              'All' radio buttons are present and highlighted on the page.
-	 * @return : boolean - true if all three radio buttons are displayed, false
-	 *         otherwise
-	 * @throws : Exception - if there is an issue locating or highlighting the radio
-	 *           buttons
-	 * @author : YAKSHA
-	 */
-	public boolean areFilterByStatusRadioButtonsPresent() throws Exception {
 		return false;
 	}
 
@@ -317,7 +253,7 @@ public class pharmacy_Pages extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public String verifySelectedTabIsActiveOrNot() throws Exception {
-		String locatorAttributeValue = "";
+		
 		return null;
 	}
 
