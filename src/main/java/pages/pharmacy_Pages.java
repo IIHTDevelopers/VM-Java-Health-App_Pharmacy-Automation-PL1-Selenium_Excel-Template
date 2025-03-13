@@ -21,7 +21,7 @@ public class pharmacy_Pages extends StartupPage {
 //	TC2-Locators
 	By pharmacyTabXpath = null;
 //	TC3-LOcators
-	private By tabXpath;
+	private By tabXpath=null;
 //	TC4-Locators
 	By orderTabXpath = null;
 	By purchaseOrderSubTabXpath = null;
@@ -146,13 +146,11 @@ public class pharmacy_Pages extends StartupPage {
 	 * @throws : Exception - if there is an issue locating or highlighting the tab
 	 * @author : YAKSHA
 	 */
-	public boolean verifyAndHighlightTab(String tabName) throws Exception {
+	public boolean verifyAndHighlightPharmacySubModulesTab(String tabName) throws Exception {
 		return false;
 	}
 
-	private void setTabXpath(String tabName) {
-		
-	}
+	
 
 	/**
 	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 about
@@ -389,6 +387,35 @@ public class pharmacy_Pages extends StartupPage {
 	public void closeModalBySubjectName(String modalTitle) throws Exception {
 		
 	}
+	
+	/**
+	 * @Test8.2 about this method
+	 * clickAndEnterValueInSearchField()
+	 * 
+	 * @param : String
+	 * @description : Enters value in the search bar
+	 * @return : boolean
+	 * @throws : Exception - if there is an issue finding or typing the text
+	 * @author : YAKSHA
+	 */
+	public boolean clickAndEnterValueInSearchField(String searchData) {
+		
+		return false;
+	}
+
+	/**
+	 * @Test8.3 
+	 * about this method highlightAndClickOnButton()
+	 * 
+	 * @param : By, String
+	 * @description : Highlights the provided element and clicks on it
+	 * @return : boolean
+	 * @throws : Exception - if there is an issue finding the element
+	 * @author : YAKSHA
+	 */
+	public boolean highlightAndClickOnButton(By element, String buttonName) {
+		return false;
+	}	
 
 	/**
 	 * @Test8.4 about this method
@@ -420,34 +447,5 @@ public class pharmacy_Pages extends StartupPage {
 	public boolean doesPrintContainsInvoiceNumber(String invoiceNumber) throws Exception {
 		return false;
 	}
-
-	/**
-	 * @Test8.2 about this method
-	 * clickAndEnterValueInSearchField()
-	 * 
-	 * @param : String
-	 * @description : Enters value in the search bar
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding or typing the text
-	 * @author : YAKSHA
-	 */
-	public boolean clickAndEnterValueInSearchField(String searchData) {
-		
-		return false;
-	}
-
-	/**
-	 * @Test8.3 
-	 * about this method highlightAndClickOnButton()
-	 * 
-	 * @param : By, String
-	 * @description : Highlights the provided element and clicks on it
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the element
-	 * @author : YAKSHA
-	 */
-	public boolean highlightAndClickOnButton(By element, String buttonName) {
-		return false;
-	}	
 
 }
