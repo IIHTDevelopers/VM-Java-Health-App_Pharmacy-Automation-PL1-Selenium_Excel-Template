@@ -65,7 +65,7 @@ public class pharmacy_testcase extends AppTestBase {
 			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section\n"
 					+ "1. Login in the healthapp application\n" + "2. Scroll down menu till pharmacy\n"
 					+ "3. Click on the pharmacy")
-	public void verifyPharmacyModule() throws Exception {
+	public void getPharmacyPageUrl() throws Exception {
 
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 
@@ -77,16 +77,16 @@ public class pharmacy_testcase extends AppTestBase {
 	@Test(priority = 3, groups = {
 			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section\n"
 					+ "1. Click on the Pharmacy Module drop-down arrow\n" + "2. Click on Order")
-	public void verifyPharmacySubModules() throws Exception {
+	public void verifyAndHighlightPharmacySubModulesTab() throws Exception {
 
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("Order"), "Order tab is not visible");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("Supplier"), "Supplier tab is not visible");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("Report"), "Report tab is not visible");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("Setting"), "Setting tab is not visible");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("Store"), "Store tab is not visible");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightTab("SupplierLedger"),
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("Order"), "Order tab is not visible");
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("Supplier"), "Supplier tab is not visible");
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("Report"), "Report tab is not visible");
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("Setting"), "Setting tab is not visible");
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("Store"), "Store tab is not visible");
+		Assert.assertTrue(pharmacy_pl1_pageInstance.verifyAndHighlightPharmacySubModulesTab("SupplierLedger"),
 				"SupplierLedger tab is not visible");
 	}
 
@@ -103,13 +103,12 @@ public class pharmacy_testcase extends AppTestBase {
 
 		Assert.assertTrue(pharmacy_pl1_pageInstance.areSubTabsUnderOrderPresent(),
 				"All the sub tabs under order are not present");
-
+		
 		Assert.assertTrue(pharmacy_pl1_pageInstance.isSearchBarPresent(), "Search Bar is not present");
 
 		Assert.assertTrue(pharmacy_pl1_pageInstance.areDateDropdownsPresent(), "Date dropdowns are not present");
 		Assert.assertTrue(pharmacy_pl1_pageInstance.isSelectSupplierDropdownPresent(),
 				"Select supplier dropdown is not present");
-
 
 	}
 
@@ -146,7 +145,7 @@ public class pharmacy_testcase extends AppTestBase {
 					+ "1. Click on the new Good Receipt button\n"
 					+ "User should be able to click on the new Good Receipt button\n"
 					+ "User should be able to add a new receipt after filling all mandatory fields")
-	public void addNewGoodReceipt() throws Exception {
+	public void verifyConfirmationMessageOnPrintingAndSavingGoodReceipt() throws Exception {
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 		userActionsInstance = new UserActions(driver);
 
@@ -167,7 +166,7 @@ public class pharmacy_testcase extends AppTestBase {
 
 	@Test(priority = 8, groups = { "sanity" }, description = "Verify that the user can view the added receipt.\r\n"
 			+ "If the receipt is added, \r\n" + "then click on the \"View\" button.")
-	public void verifyAddedGoodReceipt() throws Exception {
+	public void doesPrintContainsInvoiceNumber() throws Exception {
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 		userActionsInstance = new UserActions(driver);
 
