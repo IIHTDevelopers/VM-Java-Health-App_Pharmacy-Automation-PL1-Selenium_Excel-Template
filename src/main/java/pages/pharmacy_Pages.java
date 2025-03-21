@@ -35,18 +35,7 @@ public class pharmacy_Pages extends StartupPage {
 //	TC6-Locators
 	By printReceiptButtonId = null;
 	By closeModalButtonXpath = null;
-//	TC7&8-Locators
-	By itemNameId = null;
-	By batchNumberId = null;
-	By expiryDateFieldId = null;
-	By quantityId = null;
-	By rateId = null;
-	By mrpId = null;
-	By saveButtonId = null;
-	By modalXpath = null;
-	By supplierNameDropdownId = null;
-	By invoiceNumberFieldId = null;
-	By paymentModeDropdownId = null;
+
 	
 	
 	String pageName = this.getClass().getSimpleName();
@@ -153,7 +142,7 @@ public class pharmacy_Pages extends StartupPage {
 	
 
 	/**
-	 * @Test4.1, @Test5.1, @Test6.1 @Test7.1 about
+	 * @Test4.1, @Test5.1, @Test6.1 about
 	 * this method visitOrderTabUnderPharmacy()
 	 * 
 	 * @param : null
@@ -256,7 +245,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.2, @Test7.2 and @Test7.3 about this method clickButtonByText()
+	 * @Test6.2 about this method clickButtonByText()
 	 * 
 	 * @param buttonText : String - The text of the button to be clicked
 	 * @description : This method locates a button using its text and performs a
@@ -292,7 +281,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.4, @Test7.6 about this method
+	 * @Test6.4 about this method
 	 * verifyMessageByText()
 	 * 
 	 * @param messageText - the text to match within the message element
@@ -314,7 +303,7 @@ public class pharmacy_Pages extends StartupPage {
 	}
 
 	/**
-	 * @Test6.5, @Test8.5 and about this method closeAddGoodReceiptModal()
+	 * @Test6.5 and about this method closeAddGoodReceiptModal()
 	 * 
 	 * @param : null
 	 * @description : This method locates the "Close" button of the "Add Good
@@ -329,122 +318,6 @@ public class pharmacy_Pages extends StartupPage {
 	 * @author : YAKSHA
 	 */
 	public boolean closeAddGoodReceiptModal() throws Exception {
-		return false;
-	}
-
-	/**
-	 * @Test7.4 about this method addGriItemWithMandatoryFieldsOnly()
-	 * 
-	 * @param itemName    - the name of the item to be added
-	 * @param batchNumber - the batch number of the item
-	 * @param quantity    - the quantity of the item
-	 * @param rate        - the rate of the item
-	 * @param mrp         - the MRP (Maximum Retail Price) of the item
-	 * @description : This method adds an item to the GRI (Goods Receipt Inventory)
-	 *              with mandatory fields only. It highlights and enters values for
-	 *              item name, batch number, expiry date, quantity, rate, and MRP.
-	 *              If any of these fields are not provided, they are skipped. The
-	 *              method then clicks the save button. If the modal appears, it
-	 *              waits for the modal to fully load.
-	 * @return : void
-	 * @throws : Exception - if there is any issue locating elements, entering data,
-	 *           or clicking the save button
-	 * @author : YAKSHA
-	 */
-	public void addGriItemWithMandatoryFieldsOnly(String itemName, String batchNumber, String quantity, String rate,
-			String mrp) throws Exception {
-	
-	}
-
-	/**
-	 * @Test7.5 about this method enterMandatoryDetailsToPrintGoodReceipt()
-	 * 
-	 * @param invoiceNumber - the invoice number to be entered in the field
-	 * @description : This method enters mandatory details required to print a good
-	 *              receipt. It locates and highlights the supplier dropdown,
-	 *              invoice number field, and payment mode dropdown. It then enters
-	 *              the provided invoice number and selects the necessary options
-	 *              from the dropdowns before clicking the print receipt button.
-	 * @return : void
-	 * @throws : Exception - if there is any issue locating elements, entering data,
-	 *           or clicking buttons
-	 * @author : YAKSHA
-	 */
-	public void enterMandatoryDetailsToPrintGoodReceipt(String invoiceNumber) throws Exception {
-		
-	}
-
-	/**
-	 * @Test8.1 about this method closeModalBySubjectName()
-	 * 
-	 * @param : String
-	 * @description : Closes the modal with the subject name
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding or clicking the cross
-	 *           button
-	 * @author : YAKSHA
-	 */
-	public void closeModalBySubjectName(String modalTitle) throws Exception {
-		
-	}
-	
-	/**
-	 * @Test8.2 about this method
-	 * clickAndEnterValueInSearchField()
-	 * 
-	 * @param : String
-	 * @description : Enters value in the search bar
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding or typing the text
-	 * @author : YAKSHA
-	 */
-	public boolean clickAndEnterValueInSearchField(String searchData) {
-		
-		return false;
-	}
-
-	/**
-	 * @Test8.3 
-	 * about this method highlightAndClickOnButton()
-	 * 
-	 * @param : By, String
-	 * @description : Highlights the provided element and clicks on it
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding the element
-	 * @author : YAKSHA
-	 */
-	public boolean highlightAndClickOnButton(By element, String buttonName) {
-		return false;
-	}	
-
-	/**
-	 * @Test8.4 about this method
-	 * clickViewButtonWithInvoice()
-	 * 
-	 * @param : String
-	 * @description : Clicks on the "view" button next to a particular invoice
-	 *              number
-	 * @return : void
-	 * @throws : Exception - if there is an issue finding or clicking the "view"
-	 *           button
-	 * @author : YAKSHA
-	 */
-	public void clickViewButtonWithInvoice(String invoiceNumber) throws Exception {
-		
-	}
-
-	/**
-	 * @Test8.6 about this method doesPrintContainsInvoiceNumber()
-	 * 
-	 * @param : String
-	 * @description : Verify whether the printed report contains expected invoice
-	 *              number
-	 * @return : boolean
-	 * @throws : Exception - if there is an issue finding or clicking the invoice
-	 *           number text button
-	 * @author : YAKSHA
-	 */
-	public boolean doesPrintContainsInvoiceNumber(String invoiceNumber) throws Exception {
 		return false;
 	}
 
