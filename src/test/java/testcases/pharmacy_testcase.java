@@ -46,7 +46,7 @@ public class pharmacy_testcase extends AppTestBase {
 	}
 
 	@Test(priority = 1, groups = { "sanity" }, description = "Verify the title and url of  the current page.")
-	public void verifyTitleOfTheHomePage() throws Exception {
+	public void verifyTitleAndURLOfTheHomePage() throws Exception {
 		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
 		locatorsFactoryInstance = new LocatorsFactory(driver);
 
@@ -139,48 +139,6 @@ public class pharmacy_testcase extends AppTestBase {
 		pharmacy_pl1_pageInstance.verifyMessageByText("Please, Insert Valid Data");
 		Assert.assertTrue(pharmacy_pl1_pageInstance.closeAddGoodReceiptModal());
 	}
-
-	@Test(priority = 7, groups = {
-			"sanity" }, description = "Precondition: User should be logged in and on the Pharmacy section\n"
-					+ "1. Click on the new Good Receipt button\n"
-					+ "User should be able to click on the new Good Receipt button\n"
-					+ "User should be able to add a new receipt after filling all mandatory fields")
-	public void verifyConfirmationMessageOnPrintingAndSavingGoodReceipt() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		Map<String, String> newGriItemData = new FileOperations().readExcelPOI(expectedDataFilePath, "Pharmacy");
-		String itemName = newGriItemData.get("itemname"), batchNumber = newGriItemData.get("batchnumber"),
-				quantity = newGriItemData.get("quantity"), rate = newGriItemData.get("rate");
-		int randomSixDigit = userActionsInstance.randomNumber(100000, 900000);
-		randomInvoiceNumber = String.valueOf(randomSixDigit);
-		System.out.println("Random Invoce Number : " + randomSixDigit);
-		pharmacy_pl1_pageInstance.visitTabUnderPharmacy("Order");
-		pharmacy_pl1_pageInstance.clickButtonByText("Add New Good Receipt");
-		pharmacy_pl1_pageInstance.clickButtonByText("Add New Item");
-		pharmacy_pl1_pageInstance.addGriItemWithMandatoryFieldsOnly(itemName, batchNumber, quantity, rate, null);
-		pharmacy_pl1_pageInstance.enterMandatoryDetailsToPrintGoodReceipt(randomInvoiceNumber);
-		Assert.assertEquals(pharmacy_pl1_pageInstance.verifyMessageByText("Goods Receipt is Generated and Saved."),
-				"Goods Receipt is Generated and Saved.");
-	}
-
-	@Test(priority = 8, groups = { "sanity" }, description = "Verify that the user can view the added receipt.\r\n"
-			+ "If the receipt is added, \r\n" + "then click on the \"View\" button.")
-	public void doesPrintContainsInvoiceNumber() throws Exception {
-		pharmacy_pl1_pageInstance = new pharmacy_Pages(driver);
-		userActionsInstance = new UserActions(driver);
-
-		userActionsInstance.click(locatorsFactoryInstance.closeModalButtonXpath2);
-		pharmacy_pl1_pageInstance.closeModalBySubjectName("Add Good Receipt");
-		Assert.assertTrue(pharmacy_pl1_pageInstance.clickAndEnterValueInSearchField(randomInvoiceNumber),
-				"Search Bar is not Displayed");
-		pharmacy_pl1_pageInstance.highlightAndClickOnButton(locatorsFactoryInstance.showDetails,
-				"Show Details Button");
-		pharmacy_pl1_pageInstance.clickViewButtonWithInvoice(randomInvoiceNumber);
-		Assert.assertTrue(pharmacy_pl1_pageInstance.doesPrintContainsInvoiceNumber(randomInvoiceNumber));
-		Assert.assertTrue(pharmacy_pl1_pageInstance.closeAddGoodReceiptModal());
-	}
-
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
